@@ -974,8 +974,13 @@ height: 60px; /* Mengurangi tinggi navbar */
 }
 
 .navbar-brand {
+    font-family: 'Bauhaus 93', sans-serif;
+    word-spacing: 2px; 
+    letter-spacing: 0.5px;
+    font-style: italic;
 font-size: 1.2rem; /* Mengurangi ukuran font */
 }
+
 
 .navbar-brand img {
 width: 50px; /* Mengurangi ukuran logo */

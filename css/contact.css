@@ -259,8 +259,13 @@ a .navbar-brand {
     }
     
     .navbar-brand {
-        font-size: 1.2rem; /* Mengurangi ukuran font */
+        font-family: 'Bauhaus 93', sans-serif;
+        word-spacing: 2px; 
+        letter-spacing: 0.5px;
+        font-style: italic;
+    font-size: 1.2rem; /* Mengurangi ukuran font */
     }
+    
 
     .navbar-brand img {
         width: 50px; /* Mengurangi ukuran logo */
