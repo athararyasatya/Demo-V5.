@@ -50,3 +50,35 @@ document.addEventListener("DOMContentLoaded", function() {
     // Inisialisasi carousel pertama kali
     updateCarousel();
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to set equal height for product cards
+    function setEqualHeightForProductCards() {
+        // Select all card wrappers inside the product section
+        const productCardWrappers = document.querySelectorAll('#product .card-wrapper');
+        let maxHeight = 0;
+
+        // Reset height
+        productCardWrappers.forEach(card => {
+            card.style.height = 'auto';
+        });
+
+        // Get the maximum height
+        productCardWrappers.forEach(card => {
+            maxHeight = Math.max(maxHeight, card.offsetHeight);
+        });
+
+        // Set all cards to the maximum height
+        productCardWrappers.forEach(card => {
+            card.style.height = maxHeight + 'px';
+        });
+    }
+
+    // Call function to set equal height for product cards
+    setEqualHeightForProductCards();
+
+    // Reapply equal height on window resize
+    window.addEventListener('resize', setEqualHeightForProductCards);
+});

@@ -37,6 +37,7 @@ nav .navbar .sticky-navbar {
 
 a .navbar-brand {
     font-size: 10px;
+
 }
 
 .navbar-brand {
@@ -47,7 +48,6 @@ a .navbar-brand {
     font-style: italic;
 }
 
-
 #navbarNav a:hover {
     color: var(--logo);
     
@@ -57,14 +57,16 @@ a .navbar-brand {
     margin-left: 25px; /* Jarak antara item menu */
 }
 
-
-
 /* tentang */
-#about{
+
+
+#story{
     height: 80vh;
+   
 }
 
 .about-section {
+ 
     position: relative;
     height: 50vh;
     display: flex;
@@ -77,21 +79,20 @@ a .navbar-brand {
     margin-bottom: 50px;
     position: relative;
     z-index: 2;
-    font-size: 2rem;
     color: var(--logo); /* Agar teks tetap di depan background */
   }
 
   .parallax-bg {
-    background-image: url('../assets/about.jpg'); /* Ganti dengan path gambar furnitur yang Anda inginkan */
+    background-image: url('../assets/work.png'); 
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 90%;
+    height: 80%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; /* Mencegah gambar berulang */
-    z-index: 1; /* Di belakang teks */
+    z-index: 1;
     transform: translateY(0);
     transition: transform 0.3s ease-out;
     opacity: 25%;
@@ -99,105 +100,109 @@ a .navbar-brand {
 
   .about-section {
     position: relative;
-   
+    height: 0vh;
     overflow: hidden;
   }
 
-  /* Parallax effect */
-  /* .about-section.scrolled .parallax-bg {
-    transform: translateY(-20%);
-  } */
+/* End tentang */
 
   
-.description-section {
-    padding:  0;
+/* List product */
+
+.our-product {
+    margin-top: 80px;
+    text-align: center;
 }
 
-.description-section .col-md-6 img {
-    width: 400px; 
-    height: 400px;  
-    border-radius: 20px !important; 
+.our-product h2 {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
-.description-section .col-md-6 p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+
+.underline {
+    width: 110px;
+    height: 4px;
+    background-color: var(--button);
+    margin: 18px auto ;
+   
+}
+.carousel-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center; /* Mengatur agar kartu berada di tengah */
+    flex-wrap: wrap;
+    gap: 20px; /* Mengatur jarak antar kartu secara horizontal dan vertikal */
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.carousel-container .carousel-content1 h3{
+    font-weight: bold;
+    max-width: 60%; /* Membatasi lebar teks agar membungkus */
+    margin: 0 auto; /* Memastikan teks berada di tengah */
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+.card-wrapper {
+    flex: 0 0 45%; /* Setiap kartu mengambil sekitar 45% dari lebar container untuk memberi ruang antar kartu */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.card-custom-size {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: auto;  
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card-custom-size img {
+    padding-top: 5px;
+    object-fit: cover; /* Menjaga gambar agar proporsional */
+}
+
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+   
     text-align: left;
 }
 
-
-/* end tentang */
-
-
-
-/* Visi Misi */
-.bi-check-all {
-    font-size: 1.5em; /* Sesuaikan ukuran sesuai keinginan */
+.card-text {
+    font-size: 13px;
+    color: #666;
+    text-align: left;
+   
+    line-height: 1.5;
 }
 
-.vision-mission-section {
-    padding: 50px 0;
-    margin-top: 90px;
-}
-
-.vision-mission-section h2 {
+.date-badge {
+    font-size: 12px;
     font-weight: bold;
-    text-transform: uppercase;
+    color: var(--button);
+    margin-top: 10px;
+    text-align: left;
 }
-
-.vision-mission-section hr {
-    margin: 10px auto;
-    border: 1px solid var(--dark);
-   
-}
-
-.mission-box {
-    justify-content: center;
-   
-    width: 80%;
-    min-height: 191px;
-    display: flex;
-    margin-top: 50px;
-    text-align: center;
-    text-align: left; /* Mengatur misi agar tampil rata kiri */
-    display: block;
-    margin-left: auto;
-    margin-right: auto; /* Untuk memusatkan kotak */
-}
-
-.border-custom{
-    border: 1px solid var(--dark);
-
-}
-
-.vision-box{
-    justify-content: center;
-   
-    width: 80%;
-    min-height: 258px;
-    display: flex;
-    margin-top: 50px;
-    text-align: center;
-    text-align: left; /* Mengatur misi agar tampil rata kiri */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;/* Untuk memusatkan kotak */
-}
-.mission-box {
-    text-align: left; /* Mengatur misi agar tampil rata kiri */
-    display: block;
-}
-
-.mission-box p {
-    margin-bottom: 10px;
-}
-
-.vision-box p, .mission-box p {
-    margin-bottom: 10px;
-}
-
-/* End Visi mmisi */
-
-
 
 /* Footer */
 
@@ -318,6 +323,15 @@ a .navbar-brand {
 
 
 
+.navbar-nav .nav-link i {
+    display: none;
+}
+
+.toggle-icon {
+    font-size:2.5rem;
+    color: #0517FF;
+}
+
 @media (max-width: 1366px) { 
     html{
         font-size: 75%;
@@ -391,7 +405,7 @@ a .navbar-brand {
         max-width: 270px;
         background-color: var(--light);
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px 20px 20px 50px;
+        padding: 20px 20px 20px 70px;
         text-align: right;
         transform: translateX(100%); /* Start off-screen */
         transition: transform 0.3s ease-in-out; /* Smooth transition */
@@ -458,91 +472,92 @@ a .navbar-brand {
         opacity: 1; /* Tampilkan teks copyright saat navbar terbuka */
     }
 
-    #about{
+    #story{
         height: 50vh;
     }
 
-    .about-section .container h1 {
 
-        text-transform: uppercase;
-        justify-content: center;
-        margin: 0 auto ;
-        z-index: 2;
-        color: var(--logo); /* Agar teks tetap di depan background */
-    }
-
-    
-.description-section {
-    padding:  0 5rem;
+.our-product{
+    min-height: 50vh;
 }
 
-.description-section .col-md-6 img {
-    width: 100%;  
+
+.carousel-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center; /* Mengatur agar kartu berada di tengah */
+    flex-wrap: wrap;
+    gap: 20px; /* Mengatur jarak antar kartu secara horizontal dan vertikal */
+    width: 100%;
     height: auto;
-    border-radius: 20px !important; 
+    overflow: hidden;
 }
-.description-section .col-md-6 p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+
+.carousel-container .carousel-content1 h3{
+    font-weight: bold;
+    max-width: 60%; /* Membatasi lebar teks agar membungkus */
+    margin: 0 auto; /* Memastikan teks berada di tengah */
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+.card-wrapper {
+    flex: 0 0 70%; /* Kartu mengambil 70% dari lebar container pada layar tablet */
+}
+
+
+.card-custom-size {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: auto;  
+  
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card-custom-size img {
+    padding-top: 5px;
+    object-fit: cover; /* Menjaga gambar agar proporsional */
+}
+.card-title, .card-text {
+    white-space: normal; /* Izinkan teks membungkus ke baris berikutnya */
+    overflow-wrap: break-word; /* Memaksa pemisahan kata panjang */
+    word-break: break-word; /* Memastikan kata panjang terpecah */
+}
+.card-body {
+  
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+   
     text-align: left;
 }
 
-
-.vision-mission-section{
-    width: 100%;
-    margin-top: 20px;
-
-}
-
-
-.vision-box{
-    justify-content: center;
+.card-text {
+    font-size: 13px;
+    color: #666;
+    text-align: left;
    
-    width: 80%;
-    min-height: 190px;
-    display: flex;
-    margin-top: 50px;
-    text-align: center;
-    text-align: left; /* Mengatur misi agar tampil rata kiri */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;/* Untuk memusatkan kotak */
+    line-height: 1.5;
 }
-  
-    
 
+.date-badge {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--button);
+    margin-top: 10px;
+    text-align: left;
+}
 
-    .about-section {
-    position: relative;
-    height: 50vh;
-    max-height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-
-  .parallax-bg {
-    background-image: url('../assets/about.jpg'); /* Ganti dengan path gambar furnitur yang Anda inginkan */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; /* Mencegah gambar berulang */
-    z-index: 1; /* Di belakang teks */
-    transform: translateY(0);
-    transition: transform 0.3s ease-out;
-    opacity: 25%;
-  }
-        .row {
-            margin-left: 0;
-            margin-right: 0;
-        }
-    
         .info-section h5{
             
             padding-right: 50px;
@@ -576,7 +591,7 @@ a .navbar-brand {
             display: block;
            
         }
-       
+     
         .foot{
             padding-top: 40px;
         }
@@ -589,17 +604,13 @@ a .navbar-brand {
             margin-left: -2px; /* Atur jarak agar tidak berada langsung di bawah ikon */
         }
     
-        .footer-logo{
-            max-width: 150px;
-            left: 73%;
-        }
-
-        
+       
         .info-section {
             padding: 50px;
             height: 350px;
             
          }
+
          .social-media-icons a{
             font-size: 11px;
          }
@@ -612,200 +623,172 @@ a .navbar-brand {
         }
 
     }
+    @media (max-width: 768px) {
+      
+        html{
+            font-size: 50%;
+        }
+        .navbar-toggler-icon {
+            font-size: 2rem; /* Increase the icon size */
+        }
+        .navbar-collapse.show .nav-link i {
+            display: inline-block;
+        }
     
-    
-@media (max-width: 768px) {
-    html{
-        font-size: 50%;
-    }
-    .navbar-collapse.show .nav-link i {
-        display: inline-block;
-    }
-
-    .navbar-collapse.show .nav-link i a:hover{
-        color: var(--logo);
+        .navbar-collapse.show .nav-link i a:hover{
+            color: var(--logo);
+            
+        }
         
-    }
-    .navbar-toggler-icon {
-        font-size: 2rem; /* Increase the icon size */
-    }
+        .navbar {
+            padding: 10px 15px; /* Mengurangi padding atas bawah */
+            height: 60px; /* Mengurangi tinggi navbar */
+        }
+        
+        .navbar-brand {
+            font-size: 1.3rem; /* Mengurangi ukuran font */
+        }
     
-    .navbar {
-        padding: 10px 15px; /* Mengurangi padding atas bawah */
-        height: 60px; /* Mengurangi tinggi navbar */
-    }
+        .navbar-brand img {
+            width: 40px; /* Mengurangi ukuran logo */
+            margin-right: 1rem;
+        }
+        
+        .navbar-nav .nav-item {
+            margin-left: 15px;
+            font-size: 15px;
     
-    .navbar-brand {
-        font-size: 1.3rem; /* Mengurangi ukuran font */
-    }
-
-    .navbar-brand img {
-        width: 40px; /* Mengurangi ukuran logo */
-        margin-right: 1rem;
-    }
-    
-    .navbar-nav .nav-item {
-        margin-left: 15px;
-        font-size: 15px;
-
-    }
-
-
-    .navbar-nav {
-        flex-grow: 1; /* Memungkinkan menu untuk tumbuh dan mengisi ruang */
-    }
-
-      .navbar-collapse {
-        position: fixed;
-        right: 0;
-        top: 0;
-        height: 100vh;
-        max-width: 200px;
-        background-color: var(--light);
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px 20px 20px 20px;
-        text-align: right;
-        transform: translateX(100%); /* Start off-screen */
-        transition: transform 0.3s ease-in-out; /* Smooth transition */
-        display: flex;
-        flex-direction: column; /* Membuat item dan copyright berada dalam kolom */
-        height: 100%; /* Mengisi tinggi penuh */
-    
-    }
-    
-    .navbar-nav .nav-item {
-        font-size: 13px;
-        margin-top: 40px;
-        margin-left: 0;
-        text-align: right;
-        border-bottom: 1px solid #ddd; /* Garis bawah untuk tiap item */
-        padding-bottom: 10px; /* Spasi di bawah garis */
-        margin-bottom: 10px; /* Spasi antar item */
-    }
-
-    .navbar .collapse .navbar-collapse {
-        margin: 0;
-    }
-
-    .copyright-text {
-        margin: 0 auto;
-        padding: 0;
-
-        width: 100%;
-        font-size: 0.9rem;
-        color: var(--dark);
-        text-align: center;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-    }
-
-    .navbar-collapse.show .copyright-text {
-        opacity: 1; /* Tampilkan teks copyright saat navbar terbuka */
-    }
-
-
-   
-    .about-section h1 {
-        font-size: 2.3rem;
-        text-transform: uppercase;
-        padding-top: 4rem;
-        margin: 0 auto;
-        position: relative;
-        z-index: 2;
-        color: var(--logo); /* Agar teks tetap di depan background */
-      }
+        }
     
     
-    .our-product h2 {
-        text-transform: uppercase;
-        font-size: 16px;
+        .navbar-nav {
+            flex-grow: 1; /* Memungkinkan menu untuk tumbuh dan mengisi ruang */
+        }
     
-    }
+          .navbar-collapse {
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            max-width: 200px;
+            background-color: var(--light);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px 20px 20px 20px;
+            text-align: right;
+            transform: translateX(100%); /* Start off-screen */
+            transition: transform 0.3s ease-in-out; /* Smooth transition */
+            display: flex;
+            flex-direction: column; /* Membuat item dan copyright berada dalam kolom */
+            height: 100%; /* Mengisi tinggi penuh */
+        
+        }
+        
+    
+        
+        
+        .navbar-nav .nav-item {
+            font-size: 13px;
+            margin-top: 40px;
+            margin-left: 0;
+            text-align: right;
+            border-bottom: 1px solid #ddd; /* Garis bawah untuk tiap item */
+            padding-bottom: 10px; /* Spasi di bawah garis */
+            margin-bottom: 10px; /* Spasi antar item */
+        }
+    
+        .navbar .collapse .navbar-collapse {
+            margin: 0;
+        }
+    
+        .copyright-text {
+            margin: 0 auto;
+            padding: 0;
 
-    .description-section .col-md-6 p {
-        font-size: 1.4rem;
-        line-height: 1.6;
-        text-align: left;
-    }
+            width: 100%;
+            font-size: 0.9rem;
+            color: var(--dark);
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
     
+        .navbar-collapse.show .copyright-text {
+            opacity: 1; /* Tampilkan teks copyright saat navbar terbuka */
+        }
 
-    
-    .underline {
-        width: 70px;
-        height: 2px;
-        background-color: var(--button);
-        margin: 10px auto 0;
-    
-
-    }  
-    
      
-
-    
-.description-section .col-md-6 img {
-    width: 100%; 
-    height: auto;  
-    border-radius: 10px !important; 
-    margin-bottom: 40px;
-}
-.vision-mission-section {
-    padding-top: 0;
-    margin-top: 20px;
-    margin-top: 0;
-}
-
-.vision-mission-section h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: flex-start;
-    justify-content: flex-start;
-}
-
-    .mission-box {
         
-        padding: 0 auto;
-        justify-content: center;
-        margin-top: 20px;
-        width: 80%;
-        min-height: 100px;
-      ; /* Untuk memusatkan kotak */
-    }
-    
-    .border-custom{
-        border: 1px solid var(--dark);
-    }
-    
-    .vision-box{
-        padding: 0 auto;
-        justify-content: center;
-        min-height: 100px;
-        margin-top: 20px;
-        width: 80%;
-        
-    }
 
 
-    .mission-box p {
+        #story{
+            height: 50vh;
+         
+        }
+     
+        .our-product h2 {
+            text-transform: uppercase;
+            font-size: 20px;
+            text-align: start;
+            justify-content: start;
+            margin: 0 30px;
         
-       font-size: 10px;
-    }
+        }
+
+        #achivment h1{
+            font-size: 3rem;
+            margin: 0 auto;
+            margin-bottom: 0;
+        }
+
+        #story .container h1{
+            margin-bottom: 0;
+        }
+        .underline {
+            margin: 0 30px;
+            text-align: start;
+            justify-content: start;
+            width: 70px;
+            height: 2px;
+            background-color: var(--button);
+        
+        }
+
+        .carousel-container{
+            padding: 10px 20px;
+        }
+        .carousel-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow-y: auto;
+            width: 100%;
+            overflow-x: hidden;
+            
+        }
     
+        .card-wrapper {
+            flex: 0 0 90%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
     
-    .vision-box p{
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+           
+            text-align: start;
+            padding: 10px 40px;
+        }
+    
+        .card-title, .date-badge, .card-text {
+            font-size: 14px;
+            text-align: start;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+    
       
-        font-size: 10px;
-    }
-
-    .vision-box{
-        justify-content: center;
-        min-height: 140px; 
-        margin-right: auto;/* Untuk memusatkan kotak */
-    }
-      
-   
-/* FOOTER */
-   
 /* FOOTER */
    
 /* FOOTER */
@@ -869,5 +852,8 @@ a .navbar-brand {
     color: #6c757d;
     font-size: 0.8rem;
 }
+    
+    }
 
-}
+
+    
