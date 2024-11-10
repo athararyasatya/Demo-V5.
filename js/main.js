@@ -187,3 +187,21 @@ document.addEventListener("click", function(event) {
         }, 300); 
     }
 });
+
+// var copy = document.querySelector(".logo-slidee").cloneNode(true);
+// document.querySelector(".logoo").appendChild(copy);
+
+const logoContainer = document.querySelector(".logoo");
+const logoSlide = document.querySelector(".logo-slidee");
+
+// Mendapatkan lebar logo-slidee untuk menentukan jumlah clone yang dibutuhkan
+const logoWidth = logoSlide.offsetWidth;
+const containerWidth = logoContainer.offsetWidth;
+
+// Hitung berapa banyak duplikasi yang dibutuhkan untuk memenuhi lebar kontainer
+const numClones = Math.ceil(containerWidth / logoWidth) + 2;
+
+for (let i = 0; i < numClones; i++) {
+    const clone = logoSlide.cloneNode(true);
+    logoContainer.appendChild(clone);
+}

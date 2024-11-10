@@ -317,6 +317,104 @@ a .navbar-brand {
 }
 
 
+.patners h2{
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    
+}
+
+.underline {
+    width: 110px;
+    height: 4px;
+    background-color: var(--button);
+    margin: 30px auto 0;
+
+}
+.patners{
+
+    box-sizing: border-box;
+   padding: 60px 180px;
+    overflow: hidden;
+
+}
+/* @keyframes slidee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+} */
+
+
+@keyframes slidee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.logoo{
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;
+
+}
+
+
+.logo-slidee{
+    transform: scale(1); 
+    display: inline-flex;
+    animation: slidee 15s linear infinite;
+}
+
+
+.logo-slidee img{
+    width: 100px;
+    height: 100px;
+    margin:0 40px ;
+    object-fit: contain;
+}
+
+
+
+.logoo:hover .logo-slidee{
+    animation-play-state: paused;
+}
+
+.logoo:before,
+.logoo:after{
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 90%;
+    content: "";
+    z-index: 3;
+
+}
+.logoo:before{
+    left: 0;
+    background: linear-gradient(to left,rgba(255, 255, 255, 0), white);
+ 
+}
+
+
+.logoo:after{
+    right: 0;
+    background: linear-gradient(to right,rgba(255, 255, 255, 0), white);
+ 
+}
 
 @media (max-width: 1366px) { 
     html{
@@ -802,6 +900,108 @@ a .navbar-brand {
         min-height: 140px; 
         margin-right: auto;/* Untuk memusatkan kotak */
     }
+
+    
+.patners h2{
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background-color: var(--button);
+    margin: 30px auto 0;
+
+}
+.patners{
+
+    box-sizing: border-box;
+   padding: 40px 7px;
+    overflow: hidden;
+
+}
+/* @keyframes slidee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+} */
+
+
+@keyframes slidee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.logoo{
+    overflow: hidden;
+    padding: 40px 0;
+    white-space: nowrap;
+    position: relative;
+
+}
+
+
+.logo-slidee{
+    transform: scale(1); 
+    display: inline-flex;
+    animation: slidee 10s linear infinite;
+}
+
+
+.logo-slidee img{
+    width: 80px;
+    height: 80px;
+    margin:0 25px ;
+    object-fit: contain;
+}
+
+
+
+.logoo:hover .logo-slidee{
+    animation-play-state: paused;
+}
+
+.logoo:before,
+.logoo:after{
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 90%;
+    content: "";
+    z-index: 3;
+
+}
+.logoo:before{
+    left: 0;
+    background: linear-gradient(to left,rgba(255, 255, 255, 0), white);
+ 
+}
+
+
+.logoo:after{
+    right: 0;
+    background: linear-gradient(to right,rgba(255, 255, 255, 0), white);
+ 
+}
+
       
    
 /* FOOTER */
